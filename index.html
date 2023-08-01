@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="img_email">
+                <button class="email-btn">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <span>EMAIL</span>
+                        
+                </button>
+                <div class="img-container">
+                    <img v-bind:src="img" alt=""/>
+                </div>
+                
+            </div>
+            <div class="codes">
+                <div class="streetAddress">
+                    
+                    <span class="num-code">{{streetAddress}}</span>
+                    <span class="num-name">Street Address</span> 
+
+                </div>
+                <div class="postAddress">
+                    
+                    <span class="num-code">{{postCode}}</span>
+                    <span class="num-name">Post Address </span>
+
+                </div>
+                <div class="streetName">
+                    
+                    <span class="num-code">{{streetName}}</span>
+                    <span class="num-name">Street Name </span>
+
+                </div>
+            </div>
+            <div class="name_loc">
+                <span class="name">{{title+" "+firstName+" "+lastName}}</span>
+                <span class="loc">{{location}}</span>
+            </div>
+
+            <div class="contact">
+                <div class="content">
+                    <div>
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <span>{{phone}}</span>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            chat
+                        </span>
+                        <span>{{textNum}}</span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="get-new-user">
+            <button v-on:click="getUser()">
+                Get New User
+            </button>
+        </div>
+        
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
