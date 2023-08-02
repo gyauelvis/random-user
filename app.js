@@ -11,6 +11,7 @@ const app = Vue.createApp({
             streetName:"Rua Quatro",
             img:"./img/22.jpg",
             location:"Henderson, Alabama, United States",
+            hometown:"123"
         }
     },
     methods:{
